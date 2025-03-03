@@ -5,7 +5,7 @@ import com.backOffice_electric_cooperative.demo.domain.models.Client;
 import java.util.List;
 import java.util.Optional;
 
-public interface RetriewClient {
+public interface RetrieveClient {
     Optional<Client> getClient(Long id);
     List<Client> getAllClients();
 }

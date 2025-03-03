@@ -18,7 +18,7 @@ public class ExternalServiceAdapter implements ExternalServicePort {
 
     @Override
     public AdditionalClientInfo getAdditionalClientInfo(Long clientId) {
-        String apiUrl= "https://jsonplacceholder.typicode.com/users/"+clientId;
+        /*String apiUrl= "https://jsonplacceholder.typicode.com/users/"+clientId;
         ResponseEntity<JsonPlaceHolderClient> response = restTemplate.getForEntity(apiUrl, JsonPlaceHolderClient.class);
         JsonPlaceHolderClient client= response.getBody();
 
@@ -26,7 +26,8 @@ public class ExternalServiceAdapter implements ExternalServicePort {
             return null;
         }
         return new AdditionalClientInfo(client.getId(), client.getName(), client.getEmail());
-
+           */
+        return null;
     }
 
     private static class JsonPlaceHolderClient{

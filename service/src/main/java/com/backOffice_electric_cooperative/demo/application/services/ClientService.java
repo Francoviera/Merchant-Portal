@@ -9,17 +9,17 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ClientService implements DeleteClient, NewClient, RetriewClient, UpdateClient, GetAdditionalClientInfoUseCase {
+public class ClientService implements DeleteClient, NewClient, RetrieveClient, UpdateClient, GetAdditionalClientInfoUseCase {
 
     private final NewClient newClientImpl;
-    private final RetriewClient retriewClientImpl;
+    private final RetrieveClient retrieveClientImpl;
     private final UpdateClient updateClientImpl;
     private final DeleteClient deleteClientImpl;
     private final GetAdditionalClientInfoUseCase getAdditionalClientInfoUseCase;
 
-    public ClientService(NewClient newClient, RetriewClient retriewClient, UpdateClient updateClient, DeleteClient deleteClient, GetAdditionalClientInfoUseCase getAdditionalClientInfoUseCase) {
+    public ClientService(NewClient newClient, RetrieveClient retrieveClient, UpdateClient updateClient, DeleteClient deleteClient, GetAdditionalClientInfoUseCase getAdditionalClientInfoUseCase) {
         this.newClientImpl = newClient;
-        this.retriewClientImpl = retriewClient;
+        this.retrieveClientImpl = retrieveClient;
         this.updateClientImpl = updateClient;
         this.deleteClientImpl = deleteClient;
         this.getAdditionalClientInfoUseCase= getAdditionalClientInfoUseCase;
@@ -43,12 +43,12 @@ public class ClientService implements DeleteClient, NewClient, RetriewClient, Up
 
     @Override
     public Optional<Client> getClient(Long id) {
-        return retriewClientImpl.getClient(id);
+        return retrieveClientImpl.getClient(id);
     }
 
     @Override
     public List<Client> getAllClients() {
-        return retriewClientImpl.getAllClients();
+        return retrieveClientImpl.getAllClients();
     }
 
     @Override
