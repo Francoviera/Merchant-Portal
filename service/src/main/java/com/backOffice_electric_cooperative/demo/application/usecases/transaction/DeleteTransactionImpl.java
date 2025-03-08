@@ -1,4 +1,4 @@
-package com.backOffice_electric_cooperative.demo.application.usecases;
+package com.backOffice_electric_cooperative.demo.application.usecases.transaction;
 
 import com.backOffice_electric_cooperative.demo.domain.ports.input.transaction.DeleteTransaction;
 import com.backOffice_electric_cooperative.demo.domain.ports.output.TransactionRepositoryPort;

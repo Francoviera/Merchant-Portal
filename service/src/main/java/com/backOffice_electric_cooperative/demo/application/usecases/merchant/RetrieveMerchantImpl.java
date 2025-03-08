@@ -1,8 +1,7 @@
-package com.backOffice_electric_cooperative.demo.application.usecases;
+package com.backOffice_electric_cooperative.demo.application.usecases.merchant;
 
 import com.backOffice_electric_cooperative.demo.domain.models.Merchant;
 import com.backOffice_electric_cooperative.demo.domain.ports.input.merchant.RetrieveMerchant;
-import com.backOffice_electric_cooperative.demo.domain.ports.output.ClientRepositoryPort;
 import com.backOffice_electric_cooperative.demo.domain.ports.output.MerchantRepositoryPort;
 
 import java.util.List;

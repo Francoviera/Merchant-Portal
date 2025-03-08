@@ -28,7 +28,7 @@ public class TransactionController {
     }
 
     @GetMapping("/{transactionId}")
-    public ResponseEntity<Transaction> getMerchant(@PathVariable Long transactionId) {
+    public ResponseEntity<Transaction> getUser(@PathVariable Long transactionId) {
         return transactionService.getTransaction(transactionId)
                 .map(transaction -> new ResponseEntity<>(transaction, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));

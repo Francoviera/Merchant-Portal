@@ -26,6 +26,6 @@ public class TransactionEntity {
     public Transaction toDomainModel(){return new Transaction(id, description, date);}
 
     public static TransactionEntity fromDomainInModel(Transaction transaction) {
-        return new TransactionEntity(transaction.get);
+        return new TransactionEntity(transaction.getId(), transaction.getDescription(), transaction.getDate());
     }
 }
